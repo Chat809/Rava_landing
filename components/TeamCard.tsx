@@ -1,6 +1,9 @@
-import React from "react";
-import instaImg from '../IMGS/img_instagram.png';
+import React from "react"; 
+// @ts-ignore
+import instaImg from '../IMGS/img_instagram.png'; 
+// @ts-ignore
 import gitImg from '../IMGS/img_github.png';
+// @ts-ignore
 import linkedinImg from '../IMGS/img_linkedin.png';
 
 interface TeamCardPropos {

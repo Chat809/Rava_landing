@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import logo from '../IMGS/logo_rava.png';
 
 const Header: React.FC = () => {

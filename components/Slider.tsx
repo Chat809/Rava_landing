@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from 'react';
 
+interface Repo {
+  name: string;
+  html_url: string;
+}
+
 const Slider: React.FC = () => {
   const apiUrlRepos = `https://api.github.com/users/Chat809/repos`;
-  const [repos, setRepos] = useState([]);
+  const [repos, setRepos] = useState<Repo[]>([]);
 
   useEffect(() => {
-    fetch(apiUrlRepos)
-      .then(async res => {
-        if (!res.ok) {
-          throw new Error(res.status);
+    const fetchRepos = async () => {
+      try {
+        const response = await fetch(apiUrlRepos);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch repos. Status: ${response.status}`);
         }
-
-        let data = await res.json();
+        const data: Repo[] = await response.json();
         setRepos(data);
-      })
-      .catch(e => console.log(e));
+      } catch (error) {
+        console.error('Error fetching repos:', error);
+      }
+    };
+    fetchRepos();
   }, []);
 
   useEffect(() => {
@@ -28,14 +36,14 @@ const Slider: React.FC = () => {
 
   const handleBeforeClick = () => {
     const reposList = document.getElementById("repos-list");
-    if (reposList) {
+    if (reposList && reposList.firstElementChild) {
       reposList.appendChild(reposList.firstElementChild);
     }
   };
 
   const handleNextClick = () => {
     const reposList = document.getElementById("repos-list");
-    if (reposList) {
+    if (reposList && reposList.lastElementChild) {
       reposList.insertBefore(reposList.lastElementChild, reposList.firstElementChild);
     }
   };
@@ -43,7 +51,7 @@ const Slider: React.FC = () => {
   return (
     <div className="repos-slider">
       <button className="poppins" id="before" onClick={handleBeforeClick}>Anterior</button>
-      <div id="repos-list"></div>
+      <ul id="repos-list"></ul>
       <button className="poppins" id="next" onClick={handleNextClick}>Próximo</button>
     </div>
   );
