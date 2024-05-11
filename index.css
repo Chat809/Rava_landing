@@ -1,0 +1,315 @@
+html {
+  background-position: center;
+  background-size: cover;
+  background-image: url("IMGS/bg-home.jpg");
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  height: 9.6vh;
+}
+
+.box-header {
+  width: 92%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4vh;
+}
+
+.box-logo {
+  display: flex;
+  justify-content: center;
+  height: 9.5vh;
+}
+
+.logo-rava {
+  background-size: cover;
+}
+
+.links-nav {
+  transition: border-bottom 0.3s linear;
+  text-decoration: none;
+  padding-bottom: 1.2em;
+  padding-top: 1.2em;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+.links-nav:hover,
+.links-nav:active {
+  border-bottom: 0.2vh solid rgba(255, 255, 255, 1);
+}
+
+.poppins {
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(255, 255, 255, 1);
+}
+
+.alegreya{
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-style: normal;
+}
+
+.box-content-home {
+  height: 90.4vh;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10vw;
+}
+
+.box-card-rava-home,
+.box-rava-art-home {
+  width: 30%;
+  height: 70%;
+  border-radius: 2em;
+  border: 3px solid white;
+}
+
+.box-content-services-portfolio {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10vw;
+}
+
+.title-content {
+  font-size: 2.5em;
+  align-items: center;
+  display: flex;
+  font-weight: 400;
+  justify-content: center;
+  height: 33vh;
+}
+
+.box-cards-services {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 63vh;
+}
+
+.box-card-services {
+  width: 23vw;
+  height: 23vh;
+  border: 3px solid white;
+  border-radius: 2em;
+}
+
+.img-card-services {
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+}
+
+.project-card-name {
+  text-align: center;
+}
+
+.box-content-team {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10vw;
+}
+
+.box-cards-team{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.box-card-team {
+  border-radius: 6%;
+  width: 40vh;
+  height: 50vh;
+  border: 3px solid white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-img-description-card-team {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  height: 60%;
+}
+
+.img-avatar-card-team {
+  width: 12vh;
+  height: 12vh;
+  border-radius: 50%;
+}
+
+.name-card-team {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+.description-card-team {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8vh;
+  text-align: center;
+}
+
+.box-social-media-card-team {
+  display: flex;
+  justify-content: space-around;
+  width: 56%;
+  height: 20%;
+  align-items: center;
+}
+
+.link-icon-card-team {
+  width: 6vh;
+  height: 6vh;
+  border: 2px solid white;
+  border-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-social-media-card-team {
+  width: 60%;
+  height: 60%;
+}
+
+.box-content-FAQs {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10vw;
+}
+
+.box-cards-FAQs {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.box-card-FAQ {
+  height: auto;
+  min-height: 4em;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 2em;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.box-card-FAQ:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.title-FAQ {
+  font-size: 2em;
+  padding-top: 0.2em;
+}
+
+.description-FAQ{
+  margin-top: 1em;
+  text-align: left;
+}
+
+footer {
+  height: 25vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10vh 10vw;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  border-radius: 1em;
+  border: 3px solid white;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+footer h4 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.icon-social-medias-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-social-media-footer {
+  background-size: cover;
+  width: 42px;
+  height: 42px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  footer {
+    padding: 20px 16px;
+  }
+
+  .footer-list {
+    width: 100%;
+  }
+
+  .container {
+    padding-right: 0;
+  }
+
+  .icon-social-media-footer {
+    flex-direction: row;
+  }
+}
