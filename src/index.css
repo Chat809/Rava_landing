@@ -37,8 +37,14 @@ header {
   background-size: cover;
 }
 
+.box-links-nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .links-nav {
-  transition: border-bottom 0.3s linear;
+  transition: border-bottom 0.3s linear, transform 0.3s ease;
   text-decoration: none;
   padding-bottom: 1.2em;
   padding-top: 1.2em;
@@ -49,12 +55,19 @@ header {
 .links-nav:hover,
 .links-nav:active {
   border-bottom: 0.2vh solid rgba(255, 255, 255, 1);
+  transform: scale(1.05);
 }
 
 .poppins {
   font-weight: 400;
   font-style: normal;
-  color: rgba(244, 244, 244, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.alegreya {
+  font-family: "Alegreya Sans SC", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  font-style: normal;
 }
 
 .box-content-home {
@@ -71,7 +84,7 @@ header {
   width: 30%;
   height: 70%;
   border-radius: 2em;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 1);
 }
 
 .box-content-services-portfolio {
@@ -82,10 +95,10 @@ header {
 }
 
 .title-content {
-  font-size: 3em;
-  font-weight: bold;
+  font-size: 2.5em;
   align-items: center;
   display: flex;
+  font-weight: 400;
   justify-content: center;
   height: 33vh;
 }
@@ -100,7 +113,7 @@ header {
 .box-card-services {
   width: 23vw;
   height: 23vh;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 1);
   border-radius: 2em;
 }
 
@@ -118,20 +131,39 @@ header {
 .box-content-team {
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   margin: 0 10vw;
+}
+
+.box-cards-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .box-card-team {
   border-radius: 6%;
   width: 40vh;
   height: 50vh;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 1);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box-card-team:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05) translateZ(0);
 }
 
 .box-img-description-card-team {
@@ -172,7 +204,7 @@ header {
 .link-icon-card-team {
   width: 6vh;
   height: 6vh;
-  border: 2px solid white;
+  border: 2px solid rgba(255, 255, 255, 1);
   border-radius: 2vh;
   display: flex;
   justify-content: center;
@@ -184,49 +216,51 @@ header {
   height: 60%;
 }
 
-.repos-slider {
-  display: flex;
-  justify-content: space-between;
+.box-content-FAQs {
   height: 100vh;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   margin: 0 10vw;
 }
 
-#repos-list {
-  list-style: none;
-  width: 80vw;
-  height: 40vh;
-  overflow: hidden;
+.box-cards-FAQs {
+  height: 100%;
+  width: 100%;
   display: flex;
-  justify-content: center;
-}
-
-.li-repos {
-  border: 1px solid #ccc;
-  border-radius: 2em;
-  text-align: center;
-  font-size: 18px;
-  text-decoration: none;
-  display: none;
+  justify-content: space-between;
   flex-direction: column;
-  justify-content: space-around;
-  width: 60%;
 }
 
-#repos-list .li-repos:first-child {
-  display: flex;
-}
-
-#before, #next{
-  background: transparent;
-  border: 2px solid white;
+.box-card-FAQ {
+  height: auto;
+  min-height: 4em;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 1);
   border-radius: 2em;
-  width: 60px;
-  height: 30px;
+  background: transparent;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 1.5em;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.box-card-FAQ:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+
+.title-FAQ {
+  font-size: 2em;
+  padding-top: 0.2em;
+}
+
+.description-FAQ {
+  margin-top: 1em;
+  text-align: left;
 }
 
 footer {
@@ -234,7 +268,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 10vw;
+  margin: 10vh 10vw;
 }
 
 .footer-container {
@@ -244,7 +278,7 @@ footer {
   height: 100%;
   width: 100%;
   border-radius: 1em;
-  border: 3px solid white;
+  border: 3px solid rgba(255, 255, 255, 1);
 }
 
 .footer-list {
