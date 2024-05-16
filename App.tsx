@@ -14,7 +14,7 @@ import FAQCard from './components/FAQCard';
 const App: React.FC = () => {
   return (
     <div>
-      <Header />
+      <Header />   
       <HomeContent />
       <div className="box-content-services-portfolio">
         <div className="title-content poppins">Nossos Serviços</div>
