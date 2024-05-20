@@ -5,6 +5,7 @@ import Header from './components/Header';
 import HomeContent from './components/HomeContent';
 import Footer from './components/Footer';
 import TeamCard from './components/TeamCard';
+import WelcomePopup from './components/WelcomePopUp';
 // @ts-ignore
 import landingPageImg from './IMGS/img-landingpage.jpg';
 // @ts-ignore
@@ -15,6 +16,7 @@ const App: React.FC = () => {
   return (
     <div>
       <Header />   
+      <WelcomePopup />
       <HomeContent />
       <div className="box-content-services-portfolio">
         <div className="title-content poppins">Nossos Serviços</div>

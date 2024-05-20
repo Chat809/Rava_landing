@@ -315,6 +315,48 @@ footer a {
   margin-right: 15px;
   margin-top: 10px;
 }
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: transparent;
+  padding: 2em;
+  border-radius: 1em;
+  border: 0.2vh solid rgba(255, 255, 255, 1);
+  text-align: center;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-popup {
+  margin-top: 2vh;
+  padding: 1vh 2vw;
+  border: none;
+  background: transparent;
+  border: 0.2vh solid rgba(255, 255, 255, 1);
+  color: white;
+  border-radius: 0.5em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-popup:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 @media (max-width: 767px) {
   footer {
